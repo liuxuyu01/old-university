@@ -3,7 +3,7 @@
          <router-link
                 class="sidebar-logo-link"
                 to="/">
-                <img  :src="logo" class="sidebar-logo" width="60px" />
+                <img  :src="logo" class="sidebar-logo" width="250px" height="60px" />
         </router-link>
     </div>
 </template>

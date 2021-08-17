@@ -39,7 +39,7 @@ export default {
      height: 100vh; 
  }
  .sidebar-container{
-     width: 60px;
+     width: 250px;
      height: 100%;
      background-color: #ccc;
  }
