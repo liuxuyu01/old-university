@@ -2,4 +2,14 @@ const state = {
     userInfo:{},
     role:{}
 }
-export default state
+const mutations = {
+
+}
+const action = {
+
+}
+export default {
+    state,
+    mutations,
+    action
+}

@@ -1,8 +1,11 @@
 /**
  * 基础路由，不会通过权限控制
  */
+const oneRouter = require('../view/one/router')
+const twoRouter = require('../view/two/router')
 
-const baseRouter = [{
+const baseRouter = [
+    {
         path: '/404',
         name: '404',
         icon: 'el-icon-user-solid',
@@ -33,35 +36,7 @@ const baseRouter = [{
         icon: 'el-icon-s-goods',
         component: (resolve) => require(['@/view/login/index'], resolve)
     },
-    {
-        path: '/one',
-        name: 'one',
-        icon: 'el-icon-s-opportunity',
-        meta: { title: 'testone' },
-        component: (resolve) => require(['@/view/one/onetwo'], resolve),
-        redirect: '/one/oneone',
-        children: [{
-                path: '/one/oneone',
-                name: 'oneone',
-                meta: { title: 'one-one' },
-                component: (resolve) => require(['@/view/one/oneone'], resolve)
-            },
-            {
-                path: 'onetwo',
-                name: 'onetwo',
-                icon: '',
-                meta: { title: 'onetwo' },
-                component: (resolve) => require(['@/view/one/onetwo'], resolve)
-            },
-            {
-                path: 'onethree',
-                name: 'onethree',
-                meta: { title: 'one-three' },
-                component: (resolve) => require(['@/view/one/onethree'], resolve)
-            }
-        ]
-
-    }
+    ...oneRouter,...twoRouter
 ]
 
 export default baseRouter

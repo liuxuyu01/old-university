@@ -31,21 +31,3 @@ export default {
   }
 };
 </script>
- <style scoped>
- .app-wrapper{
-    position: relative;
-    display: flex;
-     width: 100%;
-     height: 100vh; 
- }
- .sidebar-container{
-     width: 250px;
-     height: 100%;
-     background-color: #ccc;
- }
- .main-container{
-     width: 100%;
-     height: 100%;
-     background-color: #ffa;
- }
-</style>

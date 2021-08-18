@@ -6,9 +6,14 @@
 <script>
 export default {
     name:'AppMain',
+ 
+    created(){
+    },
+    mounted() {
+    },
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .appmain{
     height: 90%;
     width: 100%;

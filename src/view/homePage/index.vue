@@ -3,7 +3,7 @@
 -->
 <template>
     <div class="container">
-        webcome to 前端框架
+        这里是home
     </div>
 </template>
 <script>

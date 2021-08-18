@@ -1,18 +1,11 @@
-<!--
-  首页
--->
 <template>
-    <div class="container">
-        webcome to 前端框架
-    </div>
+    <div>test1-1</div>
 </template>
 <script>
-export default {
-    components: {},
-    data () {
-        return {}
-    },
-    created () {}
-}
+export default {}
 </script>
-<style scoped ></style>
+<style scoped >
+div{
+    font-size: 30px;
+}
+</style>
