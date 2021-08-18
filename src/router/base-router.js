@@ -4,8 +4,7 @@
 const oneRouter = require('../view/one/router')
 const twoRouter = require('../view/two/router')
 
-const baseRouter = [
-    {
+const baseRouter = [{
         path: '/404',
         name: '404',
         icon: 'el-icon-user-solid',
@@ -22,7 +21,7 @@ const baseRouter = [
         name: 'home',
         icon: 'el-icon-warning',
         component: (resolve) => require(['@/layout/index'], resolve),
-        redirect: '/homePage',
+        redirect: '/login',
         children: [{
             path: '/homePage',
             name: 'homePage',
@@ -36,7 +35,7 @@ const baseRouter = [
         icon: 'el-icon-s-goods',
         component: (resolve) => require(['@/view/login/index'], resolve)
     },
-    ...oneRouter,...twoRouter
+    ...oneRouter, ...twoRouter
 ]
 
 export default baseRouter
