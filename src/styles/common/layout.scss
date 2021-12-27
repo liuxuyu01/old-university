@@ -1,0 +1,112 @@
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-reverse-column {
+    flex-direction: column-reverse
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-reverse-row {
+    flex-direction: row-reverse;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-align-stretch {
+    align-items: stretch;
+}
+
+.flex-align-start {
+    align-items: start;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-align-end {
+    align-items: end;
+}
+
+.flex-self-stretch {
+    align-self: stretch;
+}
+
+.flex-self-start {
+    align-self: start;
+}
+
+.flex-self-center {
+    align-self: center;
+}
+
+.flex-self-end {
+    align-self: end;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+.flex-justify-start {
+    justify-content: flex-start;
+}
+.flex-justify-end {
+    justify-content: flex-end;
+}
+.flex-justify-between {
+    justify-content: space-between;
+}
+.flex-justify-around {
+    justify-content: space-around;
+}
+.flex-justify-evenly {
+    justify-content: space-evenly;
+}
+
+
+
+.grid{
+    display: grid;
+}
+.grid-column{
+    grid-auto-flow: column;
+}
+.grid-row-dense{
+    grid-auto-flow: row dense;
+}
+.grid-column-dense{
+    grid-auto-flow: column dense;
+}
+.grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.grid-4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.grid-5{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(5,1fr);
+}

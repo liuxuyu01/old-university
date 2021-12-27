@@ -5,13 +5,13 @@ module.exports = [{
     path: routePath,
     name: 'two',
     icon: 'el-icon-s-opportunity',
-    meta: { title: 'testone' },
+    meta: { title: '目录二',slideHidden:false },
     component: (resolve) => require(['@/layout/index'], resolve),
     redirect: `${routePath}/twoone`,
     children: [{
             path: `${routePath}/twoone`,
             name: 'twoone',
-            meta: { title: 'one-one' },
+            meta: { title: 'one-one',slideHidden:false  },
             component: (resolve) => require(['@/view/two/twoone'], resolve)
         },
         {

@@ -1,0 +1,31 @@
+@import './common/layout.scss';
+@import './common/variable.scss';
+html {
+    font-size: 15px;
+}
+
+//换行使用单词连接符
+.hyphens-auto {
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+//超出文字显示
+.overflow-ellipsis {
+    text-overflow: ellipsis;
+}
+
+.overflow-blank {
+    text-overflow: '';
+}
+
+//文本空白符处理
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
+.white-space-pre-line {
+    white-space: pre-line;
+}
+

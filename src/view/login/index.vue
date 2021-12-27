@@ -71,15 +71,18 @@ export default {
             max: 16,
             message: "密码长度为8~16位",
             trigger: "blur",
-          }
-        ]
-      }
-    }
+          },
+        ],
+      },
+    };
   },
   created() {},
   methods: {
     onSubmit() {
-      if (this.loginForm.phone === "12345678910" && this.loginForm.password === "12345678") {
+      if (
+        this.loginForm.phone === "12345678910" &&
+        this.loginForm.password === "12345678"
+      ) {
         this.$router.push({ path: "/homePage" });
       }
       return;
@@ -88,5 +91,55 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-@import "@/styles/login/login.scss";
+.login-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login-warp {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/images/girlfriend.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    .login-warp-inner {
+      width: 400px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 5px;
+      box-shadow: 0 4px 14px 0 rgba(206, 207, 209, 0.5);
+      .warp-top {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 40px;
+        font-size: 25px;
+        font-weight: 500;
+      }
+      .warp-form,
+      .btn {
+        width: 80%;
+      }
+      .wrap-forgetpwd {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        color: #0764af;
+        div {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
 </style>

@@ -5,7 +5,7 @@ module.exports = [{
     path: routePath,
     name: 'one',
     icon: 'el-icon-s-opportunity',
-    meta: { title: 'testone' },
+    meta: { title: '目录一',slideHidden:false },
     component: (resolve) => require(['@/layout/index'], resolve),
     redirect: '/one/oneone',
     children: [{

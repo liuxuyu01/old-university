@@ -15,7 +15,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .appmain{
-    height: 90%;
+    height: calc(100% - 80px);
     width: 100%;
     background-color: #fff;
 }

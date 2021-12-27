@@ -6,10 +6,10 @@ export default {
     
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .navbar{
-    height: 5%;
+    height: 50px;
     width: 100%;
     background-color: rgb(105, 105, 68);
 }
-</style>
+</style>  

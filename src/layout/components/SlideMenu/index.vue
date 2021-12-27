@@ -20,7 +20,6 @@ import baseRouter from "@/router/base-router";
 export default {
   components: { Logo,MenuItem },
   created() {
-    console.log(baseRouter);
   },
   methods: {
     logbase() {},
