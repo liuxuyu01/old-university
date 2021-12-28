@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="window-top"><span>来不及命名的一个项目</span> </div>
+    <div id="window-top"><span>{{title}}</span> </div>
     <div id="window-content">
       <router-view />
     </div>
@@ -11,10 +11,14 @@
 export default {
   name: "App",
   computed: {
-    data() {
+   title(){
+     console.log(this);
+     return this.$store.state.app.title
+   }
+  },
+   data() {
       return {};
     },
-  },
 };
 </script>
 
