@@ -1,10 +1,56 @@
+//fiexd布局
+.fiexd{
+    position: fixed;
+}
+
+.fiexd-left-top{
+    position: fixed;
+    top:30px;
+    left:0
+}
+.fiexd-left-bottom{
+    position: fixed;
+    bottom:0;
+    left:0
+}
+.fiexd-right-top{
+    position: fixed;
+    top:30px;
+    right:0
+}
+.fiexd-right-bottom{
+    position: fixed;
+    bottom:0;
+    right:0
+   
+}
+
+//flex布局
 .flex {
     display: flex;
 }
 
+//水平垂直居中
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//平分
+.flex-around{
+  display: flex;
+  justify-content:space-around;
+}
+//靠后
+.flex-end{
+    display: flex;
+    justify-content:flex-end;
+  }
+
 .flex-1 {
     flex: 1;
 }
+
 
 .flex-column {
     flex-direction: column;
@@ -81,7 +127,7 @@
     justify-content: space-evenly;
 }
 
-
+//网格布局（待完善）
 
 .grid{
     display: grid;

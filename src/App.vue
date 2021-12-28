@@ -12,7 +12,6 @@ export default {
   name: "App",
   computed: {
    title(){
-     console.log(this);
      return this.$store.state.app.title
    }
   },
@@ -38,7 +37,7 @@ export default {
   span{
     padding-left: 20px;
     line-height: 30px;
-    font-size: 14px;
+    font-size: $font-14;
   }
 }
 #window-content {

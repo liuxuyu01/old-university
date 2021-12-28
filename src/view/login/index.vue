@@ -2,8 +2,8 @@
   首页
 -->
 <template>
-  <div class="login-container">
-    <div class="login-warp">
+  <div class="login-container flex-center">
+    <div class="login-warp flex-center">
       <div class="login-warp-inner">
         <div class="warp-top">
           <div>登</div>
@@ -94,15 +94,9 @@ export default {
 .login-container {
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   .login-warp {
     width: 70%;
     height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-image: url("../../assets/images/girlfriend.jpg");
     background-repeat: no-repeat;
     background-position: center;

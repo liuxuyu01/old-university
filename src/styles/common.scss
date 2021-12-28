@@ -1,7 +1,9 @@
 @import './common/layout.scss';
-@import './common/variable.scss';
 html {
     font-size: 15px;
+}
+.pointer{
+    cursor: pointer;
 }
 
 //换行使用单词连接符
