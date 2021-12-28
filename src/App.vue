@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="window-top"><span>{{title}}</span> </div>
+    <div id="window-top"> <span><svg-icon name="icon-weibiaoti-"></svg-icon>{{title}}</span></div>
     <div id="window-content">
       <router-view />
     </div>

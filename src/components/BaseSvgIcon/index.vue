@@ -1,9 +1,7 @@
 <template>
-  <div>
     <svg  class="icon" aria-hidden="true">
       <use :xlink:href="svgName"></use>
     </svg>
-  </div>
 </template>
 <script>
 export default {
@@ -31,5 +29,7 @@ export default {
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
+    margin: 0 5px;
+    
   }
 </style>
