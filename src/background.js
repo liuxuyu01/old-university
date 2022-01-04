@@ -17,16 +17,22 @@ async function createWindow() {
     height: 800,
     minWidth:900,
     minHeight:600,
-    frame: false,
-    titleBarStyle: 'hidden',
+    frame: false, //创建无边框窗口
+    titleBarStyle: 'hidden', //最大化最小化关闭按钮
     titleBarOverlay: true,
+    // autoHideMenuBar :true,//隐藏任务栏
+    show:false, //配合ready-to-show显示
+    backgroundColor:'#fff',
     webPreferences: {
-      
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
-      contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION
+      contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
     }
+  })
+  // 窗口加载完成后在进行显示
+  win.once('ready-to-show',()=>{
+    win.show()
   })
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
@@ -38,6 +44,8 @@ async function createWindow() {
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
   }
+
+  // win.setOverlayIcon('./assets/images/logo.png', '我的第一个软件') //右下角创建小图标（失效）
 }
 
 // Quit when all windows are closed.
@@ -84,3 +92,5 @@ if (isDevelopment) {
     })
   }
 }
+
+

@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <div id="window-top"> <span><svg-icon name="icon-weibiaoti-"></svg-icon>{{title}}</span></div>
-    <div id="window-content">
       <router-view />
-    </div>
   </div>
 </template>
 
@@ -28,23 +25,6 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-}
-#window-top {
-  width: 100%;
-  height: 30px;
-  background-color: #f0f0f0;
-  -webkit-app-region: drag;
-  span{
-    padding-left: 20px;
-    line-height: 30px;
-    font-size: $font-14;
-  }
-}
-#window-content {
-  position: relative;
-  height: calc(100% - 30px);
-  width: 100%;
-  -webkit-app-region: no-drag;
-  overflow: hidden;
+  overflow: auto;
 }
 </style>

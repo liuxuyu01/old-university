@@ -1,11 +1,12 @@
 @import './common/layout.scss';
+
 html {
-    font-size: 16px;
-}
-.pointer{
-    cursor: pointer;
+    font-size: 14px;
 }
 
+.pointer {
+    cursor: pointer;
+}
 //换行使用单词连接符
 .hyphens-auto {
     -webkit-hyphens: auto;
@@ -31,3 +32,38 @@ html {
     white-space: pre-line;
 }
 
+.border-ea {
+    border-right: 1px #eaeaea solid;
+}
+
+button {
+    -webkit-app-region: no-drag;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+//滚动条样式
+::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 10px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background: #cdcdcd;
+}
+
+// 不可选择
+.select{
+      user-select:none;
+    -webkit-user-select: none; 
+}
+.pointer{
+    cursor: pointer;
+}

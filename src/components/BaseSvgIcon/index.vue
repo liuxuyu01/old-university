@@ -1,7 +1,7 @@
 <template>
-    <svg  class="icon" aria-hidden="true">
-      <use :xlink:href="svgName"></use>
-    </svg>
+  <svg :style="{ color: color || '' }" class="icon" aria-hidden="true">
+    <use :xlink:href="svgName"></use>
+  </svg>
 </template>
 <script>
 export default {
@@ -9,8 +9,12 @@ export default {
   props: {
     name: {
       type: String,
-      default: "",
-    }
+      default: () => "",
+    },
+    color: {
+      type: String,
+      default: () => "",
+    },
   },
   data() {
     return {};
@@ -18,18 +22,18 @@ export default {
   computed: {
     svgName() {
       return `#${this.name}`;
-    }
+    },
   },
 };
 </script>
 <style lang="scss" scoped>
-  /* 阿里云svg多色图标定义 */
+/* 阿里云svg多色图标定义 */
 .icon {
-    width: 1em; height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-    margin: 0 5px;
-    
-  }
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  margin:0 5px;
+}
 </style>
