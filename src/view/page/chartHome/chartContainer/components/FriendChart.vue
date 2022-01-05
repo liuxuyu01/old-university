@@ -13,7 +13,7 @@ export default {
 .wrap-top {
   height: 65px;
   -webkit-app-region: drag;
-  background-color: $themeColor--2;
+  background-color: $color--3;
 }
 .wrap-content {
   height: calc(100% - 65px);

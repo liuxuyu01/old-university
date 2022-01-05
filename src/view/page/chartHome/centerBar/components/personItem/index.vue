@@ -6,6 +6,12 @@
   >
     <div class="wrap-left">
       <img :src="data.src" width="40px" height="40px" />
+      <base-circle
+        class="head-icon"
+        v-show="centerBarWidth < 80"
+        :sum="data.sum"
+        :theme="data.theme"
+      />
     </div>
     <div class="wrap-right">
       <div class="wrap-r-top flex-between">
@@ -23,7 +29,11 @@
           {{ data.message }}
         </div>
         <div v-if="data.isAlarm" class="wrap-alarm">
-          <base-circle :sum="data.sum" :theme="data.theme" />
+          <base-circle
+            v-show="centerBarWidth >= 80"
+            :sum="data.sum"
+            :theme="data.theme"
+          />
         </div>
         <div v-else class="wrap-alarm">
           <svg-icon name="icon-stop"></svg-icon>
@@ -44,7 +54,7 @@ export default {
       type: Object,
       default: () => {},
     },
-    width: {
+    centerBarWidth: {
       type: Number,
       default: () => 0,
     },
@@ -59,11 +69,10 @@ export default {
   computed: {
     //这个属性是防止滚动条排挤布局
     contentWidth() {
-      return `${this.width - 20}px`;
+      return `${this.centerBarWidth - 20}px`;
     },
   },
   //   mounted() {
-  //     console.log(this.width);
   //   },
 };
 </script>
@@ -73,20 +82,33 @@ export default {
   height: 45px;
   padding: 10px;
   .wrap-left {
+    position: relative;
     img {
       border-radius: 5px;
     }
+    .head-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
+
   .wrap-right {
     padding-left: 10px;
     width: calc(100% - 60px);
     white-space: nowrap;
     .wrap-r-top {
       margin-bottom: 5px;
+      position: relative;
       .wrap-name {
         width: calc(100% - 65px);
         font-weight: 600;
         overflow: hidden;
+        background-image: linear-gradient(
+          to right,
+          #fff,
+          rgba(256, 256, 256, 0)
+        );
       }
       .wrap-time {
         padding-left: 20px;
@@ -103,14 +125,15 @@ export default {
       }
       .wrap-alarm {
         padding-left: 20px;
+        // opacity: 0.1;
       }
     }
   }
 }
 .person-item:hover {
-  background-color: $themeColor--2;
+  background-color: $color--3;
 }
 .active {
-  background-color: $themeColor--2;
+  background-color: $color--3;
 }
 </style>

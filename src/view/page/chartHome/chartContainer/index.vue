@@ -8,22 +8,18 @@
 <script>
 import FriendChart from "./components/FriendChart.vue";
 import GroupChrat from "./components/GroupChrat.vue";
-import FriendCard from "./components/FriendCard.vue"
 export default {
   name: "ChartContainer",
   components: {
     FriendChart,
     GroupChrat,
-    FriendCard
   },
   props: {
-    activeIndex: {
-      type: Number,
-      default: 1,
-    },
   },
   data() {
-    return {};
+    return {
+      activeIndex:0,
+    };
   },
   computed: {
     componentName() {
@@ -33,7 +29,7 @@ export default {
           name = "FriendChart";
           break;
         case 1:
-          name = "FriendCard";
+          name = "GroupChrat";
           break;
       }
       return name;
@@ -44,7 +40,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
-  background-color: $themeColor--2;
+  background-color: $color--3;
   
 }
 </style>

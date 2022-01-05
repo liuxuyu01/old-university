@@ -9,7 +9,7 @@
         v-for="(item, index) in dataList"
         :key="index"
         :data="item"
-        :width="contentWidth"
+        :centerBarWidth="centerBarWidth"
         @click.native="selected = index"
         :active="selected === index"
       />
@@ -122,23 +122,12 @@ export default {
           time: "13:32",
         },
       ],
-      contentWidth: 0,
     };
   },
   computed: {},
   watch: {
-    centerBarWidth: {
-      immediate: true,
-      handler(val) {
-        this.contentWidth = val;
-      },
-    },
   },
   mounted() {
-    //监控窗口变化
-    window.onresize = () => {
-      this.contentWidth = this.$refs.content.offsetWidth;
-    };
   },
 };
 </script>
@@ -155,7 +144,7 @@ export default {
   }
 }
 .wrap-top:hover {
-  background-color: $themeColor--2;
+  background-color: $color--3;
 }
 .wrap-content {
   overflow: hidden;
