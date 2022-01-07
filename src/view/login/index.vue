@@ -83,7 +83,7 @@ export default {
         this.loginForm.phone === "12345678910" &&
         this.loginForm.password === "12345678"
       ) {
-        this.$router.push({ path: "/chartHome" });
+        this.$router.push({ path: "homePage" });
       }
       return;
     },

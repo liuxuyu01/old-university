@@ -8,7 +8,7 @@
       <img :src="data.src" width="40px" height="40px" />
       <base-circle
         class="head-icon"
-        v-show="centerBarWidth < 80"
+        v-show="centerBarWidth < 80 && data.sum > 0"
         :sum="data.sum"
         :theme="data.theme"
       />
@@ -30,7 +30,7 @@
         </div>
         <div v-if="data.isAlarm" class="wrap-alarm">
           <base-circle
-            v-show="centerBarWidth >= 80"
+            v-show="centerBarWidth >= 80 && data.sum > 0"
             :sum="data.sum"
             :theme="data.theme"
           />
@@ -104,11 +104,6 @@ export default {
         width: calc(100% - 65px);
         font-weight: 600;
         overflow: hidden;
-        background-image: linear-gradient(
-          to right,
-          #fff,
-          rgba(256, 256, 256, 0)
-        );
       }
       .wrap-time {
         padding-left: 20px;

@@ -1,3 +1,11 @@
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+
+
 //fiexd布局
 .fiexd{
     position: fixed;
@@ -45,6 +53,11 @@
 .flex-between{
     display: flex;
     justify-content:space-between;
+  }
+  //靠后
+.flex-start{
+    display: flex;
+    justify-content:flex-start;
   }
 //靠后
 .flex-end{

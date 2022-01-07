@@ -28,6 +28,7 @@ async function createWindow() {
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
       contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
+      // offscreen:true,//是否绘制和渲染可视区域外的窗口
     }
   })
   // 窗口加载完成后在进行显示

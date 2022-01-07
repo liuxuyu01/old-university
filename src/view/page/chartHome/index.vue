@@ -5,11 +5,13 @@
       ref="centerBar"
       :style="{ width: `${centerBarWidth}px` }"
       :centerBarWidth="centerBarWidth"
+      @clickItem="activeItem = $event"
     />
     <div class="pull-box" ref="pullBox"></div>
     <chart-container
-      class="chart-container"
       ref="chartContainer"
+      class="chart-container"
+      :activeItem="activeItem"
       :style="{ width: `${chartContainerWidth}px` }"
     />
   </div>
@@ -29,8 +31,9 @@ export default {
     return {
       windowWidth: 0, //窗口宽度
       centerBarWidth: 280, //中间初始宽度
-      slideMenuWidth: 51,
+      slideMenuWidth: 51, //左侧宽度
       inRemove: false, //是否正在移动
+      activeItem: {}, //当前点击的聊天框
     };
   },
   computed: {
@@ -74,6 +77,7 @@ export default {
 <style  scoped lang="scss">
 .chart-home {
   height: 100%;
+
   .center-bar {
     height: 100%;
   }

@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      headSrc:require('@/assets/images/head.png'),
+      headSrc:require('@/assets/images/head_boy.png'),
       menuList: [
         { icon1: "icon-comment", icon2: "icon-comment-filling", index: 0 },
         { icon1: "icon-user", icon2: "icon-user-filling", index: 1 },
@@ -73,7 +73,7 @@ export default {
       -webkit-app-region: no-drag;
       margin-top: 25px;
       :hover {
-        color: #3d87fe;
+        color: $color--1;
       }
     }
   }

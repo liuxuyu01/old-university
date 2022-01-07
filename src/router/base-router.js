@@ -23,8 +23,13 @@ const baseRouter = [
     {
         path: '/',
         name: 'home',
-        component: (resolve) => require(['@/view/page/HomePage'], resolve),
+        component: (resolve) => require(['@/view/login'], resolve),
     },
+    {
+        path: '/homePage',
+        name: 'homePage',
+        component: (resolve) => require(['@/view/page/HomePage'], resolve),
+    }
 ]
 
 export default baseRouter
